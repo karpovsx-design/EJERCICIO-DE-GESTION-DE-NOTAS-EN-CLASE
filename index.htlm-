@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestor de Notas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>Gestor de Notas</h1>
+    <p>Califica a tus 10 estudiantes · Escala de 0.0 a 5.0 · Aprueba con 3.0 o más</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="datos-curso">
+      <label>
+        Asignatura
+        <input type="text" id="asignatura" placeholder="Ej: Matemáticas">
+      </label>
+      <label>
+        Docente
+        <input type="text" id="docente" placeholder="Nombre del docente">
+      </label>
+    </section>
+
+    <section class="tabla-wrapper">
+      <table id="tablaNotas">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Estudiante</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota 4</th>
+            <th>Promedio</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+    </section>
+
+    <section class="acciones">
+      <button id="btnGuardar" class="btn btn-primario">Guardar</button>
+      <button id="btnExportar" class="btn btn-secundario">Exportar CSV</button>
+      <button id="btnLimpiar" class="btn btn-peligro">Limpiar todo</button>
+      <span id="mensaje" class="mensaje" role="status"></span>
+    </section>
+
+    <section class="resumen">
+      <div class="tarjeta"><span>Promedio del curso</span><strong id="promCurso">–</strong></div>
+      <div class="tarjeta"><span>Nota más alta</span><strong id="notaAlta">–</strong></div>
+      <div class="tarjeta"><span>Nota más baja</span><strong id="notaBaja">–</strong></div>
+      <div class="tarjeta"><span>Aprobados</span><strong id="aprobados">0</strong></div>
+      <div class="tarjeta"><span>Reprobados</span><strong id="reprobados">0</strong></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
